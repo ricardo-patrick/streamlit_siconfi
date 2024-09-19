@@ -5,69 +5,71 @@ import json
 
 st.set_page_config(layout='wide')
 
+st.title('Página com informações da API - Siconfi')
+
 df_anexos = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/anexos-relatorios")
 df_anexos = df_anexos.json()
 if df_anexos['count'] != 0:
-    st.title('anexos')
+    st.subheader('anexos')
     df_anexos_tab = pd.DataFrame(df_anexos['items'])
     df_anexos_tab
 else:
-    st.title('anexos')
+    st.subheader('anexos')
     st.write('Não tem')
 
 
 df_entes = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/entes")
 df_entes = df_entes.json()
 if df_entes['count'] != 0:
-    st.title('antes')
+    st.subheader('antes')
     df_entes_tab = pd.DataFrame(df_entes['items'])
     df_entes_tab
 else:
-    st.title('antes')
+    st.subheader('antes')
     st.write('Não tem')
 
 
 df_extratos = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/extrato_entregas")
 df_extratos = df_extratos.json()
 if df_extratos['count'] != 0:
-    st.title('extratos')
+    st.subheader('extratos')
     df_extratos_tab = pd.DataFrame(df_extratos['items'])
     df_extratos_tab
 else:
-    st.title('extratos')
+    st.subheader('extratos')
     st.write('Não tem')
 
 
 df_rreo = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo")
 df_rreo = df_rreo.json()
 if df_rreo['count'] != 0:
-    st.title('rreo')
+    st.subheader('rreo')
     df_rreo_tab = pd.DataFrame(df_rreo['items'])
     df_rreo_tab
 else:
-    st.title('rreo')
+    st.subheader('rreo')
     st.write('Não tem')
 
 
 df_rgf = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf")
 df_rgf = df_rgf.json()
 if df_rgf['count'] != 0:
-    st.title('rgf')
+    st.subheader('rgf')
     df_rgf_tab = pd.DataFrame(df_rgf['items'])
     df_rgf_tab
 else:
-    st.title('rgf')
+    st.subheader('rgf')
     st.write('Não tem')
 
 
 df_dca = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca")
 df_dca = df_dca.json()
 if df_dca['count'] != 0:
-    st.title('dca')
+    st.subheader('dca')
     df_dca_tab = pd.DataFrame(df_dca['items'])
     df_dca_tab
 else:
-    st.title('dca')
+    st.subheader('dca')
     st.write('Não tem')
 
 
