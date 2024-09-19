@@ -76,33 +76,33 @@ else:
 df_msc_patrimonial = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/msc_patrimonial")
 df_msc_patrimonial = df_msc_patrimonial.json()
 if df_msc_patrimonial['count'] != 0:
-    st.title('msc_patrimonial')
+    st.subheader('msc_patrimonial')
     df_msc_patrimonial_tab = pd.DataFrame(df_msc_patrimonial['items'])
     df_msc_patrimonial_tab
 else:
-    st.title('msc_patrimonial')
+    st.subheader('msc_patrimonial')
     st.write('Não tem')
 
 
 df_msc_orcamentaria = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/msc_orcamentaria")
 df_msc_orcamentaria = df_msc_orcamentaria.json()
 if df_msc_orcamentaria['count'] != 0:
-    st.title('msc_orcamentaria')
+    st.subheader('msc_orcamentaria')
     df_msc_orcamentaria_tab = pd.DataFrame(df_msc_orcamentaria['items'])
     df_msc_orcamentaria_tab
 else:
-    st.title('msc_orcamentaria')
+    st.subheader('msc_orcamentaria')
     st.write('Não tem')
 
 
 df_msc_controle = requests.get("https://apidatalake.tesouro.gov.br/ords/siconfi/tt/msc_controle")
 df_msc_controle = df_msc_controle.json()
 if df_msc_controle['count'] != 0:
-    st.title('msc_controle')
+    st.subheader('msc_controle')
     df_msc_controle_tab = pd.DataFrame(df_msc_controle['items'])
     df_msc_controle_tab
 else:
-    st.title('msc_controle')
+    st.subheader('msc_controle')
     st.write('Não tem')
 
 
